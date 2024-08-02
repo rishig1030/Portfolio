@@ -84,14 +84,26 @@ section{
 .sec4{
     display: none;
     transform: translate(0) scale(1);
+    background-color: pink;
 }
 .sec5{
     display: none;
     transform: translate(0) scale(1);
+    background-color: orange;
 }
 
 .active{
     display: block;
+    animation: myAnimation 1s ease-in-out;
+}
+
+@keyframes myAnimation {
+    from{
+        transform: translateY(-100%) scaleY(0);
+    }
+    to{
+        transform: translateY(0) scaleY(1);
+    }
 }
 
 .controlls{
