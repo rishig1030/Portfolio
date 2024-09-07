@@ -119,6 +119,7 @@ section{
     }
 }
 
+
 .controlls{
     position: fixed;
     z-index: 10;
@@ -236,6 +237,7 @@ section{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         padding-right: 18rem;
         .name{
             font-size: 3rem;
@@ -326,7 +328,8 @@ section{
 
 .about-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center ;
     padding-top: 2.5rem;
 
     .right-about{
@@ -469,7 +472,7 @@ section{
 
 
 /* to make the site responsive */
-@media screen and (max-width: 850px){
+@media screen and (max-width: 1000px){
     header{
         padding: 0rem !important;
     }
@@ -495,13 +498,25 @@ section{
     }
 
     .right-header{
+        
         grid-row: 1 !important;
-        width: 90% !important;
+        .btn-container{
+            width: 90vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         margin: 0 auto !important;
         .name{
             font-size: 2.5rem !important;
+            text-align: center;
         }
+        p{
+            text-align: center;
+        }
+        
     }
+    
 
     .header-content .left-header .image{
         margin: 0 auto !important;
@@ -509,18 +524,30 @@ section{
     }
 
     .about-container{
-        display: block !important;
-        
-        grid-template-columns: 1fr !important;
-        .right-about{
-            grid-template-columns: 1fr !important;
-            padding-top: 2.5rem !important;
-        }
+        display: flex !important;        
+        flex-direction: column ;
         .left-about{
             padding-right: 0 !important;
             p{
                 padding-left: 0 !important;
             }
+            h4{
+                text-align: center;
+            }
+        }
+        .left-about{
+            text-align: center;
+        }
+        .right-about{
+            padding-top: 3rem;
+           display: flex;
+           flex-direction: column;
+           width: 80vw;
+           align-items: center;
+           justify-content: center;
+           .about-item{
+                width: fit-content;
+           }
         }
     }
 
@@ -534,14 +561,27 @@ section{
     }
 
     .portfolios{
-        grid-template-columns: 1fr !important;
-        padding-bottom: 6rem !important;
+        .right-about{
+            padding-top: 3rem;
+           display: flex;
+           flex-direction: column;
+           width: 80vw;
+           align-items: center;
+           justify-content: center;
+           .about-item{
+                width: fit-content;
+           }
+        }
     }
 
     .section{
         padding: 2rem 2.5rem !important;
     }
-
+    .btn-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .controlls{
         top: auto !important;
         bottom: 0rem !important;
@@ -560,23 +600,9 @@ section{
     }
 }
 
-@media screen and (max-width:1000px) {
-    .about-container{
-       
-        grid-template-columns: 1fr !important;
-        .right-about{
-            grid-template-columns: 1fr!important;
-            padding-top: 2.5rem !important;
-        }
-        .left-about{
-            padding-right: 0 !important;
-            p{
-                padding-left: 0 !important;
-            }
-        }
-    }
+@media screen and (max-width:620px) {
     .portfolios{
         grid-template-columns: 1fr !important;
-        padding-bottom: 6rem !important;
+    padding-bottom: 6rem !important;
     }
 }
