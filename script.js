@@ -15,10 +15,12 @@ function pageTransistion(){
             
             let sec = document.getElementById(`${iden}`);
             sec.className += ' active';
-            
+            let prev = sec;
             let idremove = currentBtn[0].dataset.id;
             let secRemove = document.getElementById(`${idremove}`);
+            if(secRemove!=prev)
             secRemove.classList.remove("active");
+
         })
     }
     //section active class
